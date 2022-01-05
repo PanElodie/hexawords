@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#D07</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="medias/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <section class="section-1">
+        <div class="firework" style="bottom:-300px;right: 50vw;background-color: #98EDF9;animation-delay: 0.5s;"></div>
+        <div class="firework" style="bottom:0;right: 50vw;background-color: #FFFF00;animation-delay:1s"></div>
+        <div class="firework" style="bottom:-200px;right: 80vw;background-color: #FE782D;animation-delay: 1.5s;"></div>
+        <div class="firework" style="bottom:-50px;right: 20vw;background-color: #FE1D1D;animation-delay: 1.7s;"></div>
+        <div class="firework" style="bottom:-250px;right: 5vw;background-color: #EC1DFE;animation-delay: 2.3s"></div>
+        <div class="firework" style="bottom:-80px;right: 50vw;background-color: #FF48AA;animation-delay: 2.5s;"></div>
+
+        <div class="explosion"></div>
+
+        <svg viewBox="-300 -300 600 600">
+
+            <g class="arrow-1">
+                <use href="#dot" class="arrow" x=0 y=20></use>
+                <use href="#dot" class="arrow" x=-20 y=0></use>
+                <use href="#dot" class="arrow" x=20 y=0></use>
+                <use href="#dot" class="arrow" x=-40 y=-20></use>
+                <use href="#dot" class="arrow" x=40 y=-20></use>
+            </g>
+        </svg>
+    </section>
+
+    <section class="section-2">
+
+        <svg viewBox="-300 -300 600 600">
+
+            <defs>
+                <g id="sharp">
+                    <line x1="0" y1="-10" x2="0" y2="10" stroke="black" />
+                    <line x1="5" y1="-12" x2="5" y2="8" stroke="black" />
+                    <line x1="-7" y1="0" x2="10" y2="-8" stroke="black" />
+                    <line x1="-7" y1="5" x2="10" y2="-3" stroke="black" />
+                </g>
+            </defs>
+            <g class="speaker">
+                <use href="#dot" x=-10 y=-25></use>
+                <use href="#dot" x=-10 y=-75></use>
+                <use href="#dot" x=-37 y=-62></use>
+                <use href="#dot" x=-70 y=-50></use>
+                <use href="#dot" x=-100 y=-45></use>
+                <use href="#dot" x=-100 y=-15></use>
+                <use href="#dot" x=-100 y=15></use>
+                <use href="#dot" x=-100 y=45></use>
+                <use href="#dot" x=-70 y=50></use>
+                <use href="#dot" x=-37 y=62></use>
+                <use href="#dot" x=-10 y=75></use>
+                <use href="#dot" x=-10 y=25></use>
+                <!-- Première ligne -->
+                <use class="line-1" href="#dot" x=30 y=-25></use>
+                <use class="line-1" href="#dot" x=40 y=0></use>
+                <use class="line-1" href="#dot" x=30 y=25></use>
+                <!-- Deuxième ligne -->
+                <use class="line-2" href="#dot" x=50 y=-50></use>
+                <use class="line-2" href="#dot" x=70 y=-35></use>
+                <use class="line-2" href="#dot" x=75 y=-0></use>
+                <use class="line-2" href="#dot" x=70 y=35></use>
+                <use class="line-2" href="#dot" x=50 y=50></use>
+                <!-- Troisième ligne -->
+                <use class="line-3" href="#dot" x=60 y=-80></use>
+                <use class="line-3" href="#dot" x=85 y=-68></use>
+                <use class="line-3" href="#dot" x=105 y=-35></use>
+                <use class="line-3" href="#dot" x=110 y=0></use>
+                <use class="line-3" href="#dot" x=105 y=35></use>
+                <use class="line-3" href="#dot" x=85 y=68></use>
+                <use class="line-3" href="#dot" x=60 y=80></use>
+            </g>
+
+            <g class="cat inside-group">
+                <!-- "inside-group permet de modifier la taille du groupe avec un transform:scale -->
+                <g>
+                    <!-- Cet élément avec la classe "clickable" a une largeur plus importante et permet à l"utilisateur de cliquer plus facilement sur le groupe -->
+                    <use href="#dot" class="clickable" style="fill:#FFF;" x=0 y=-0></use>
+                    <!-- moustaches du chat -->
+                    <use href="#dot" class="moustache" x=-185 y=20></use>
+                    <use href="#dot" class="moustache" x=-150 y=10></use>
+                    <use href="#dot" class="moustache" x=-115 y=0></use>
+                    <use href="#dot" class="moustache" x=-185 y=-45></use>
+                    <use href="#dot" class="moustache" x=-150 y=-35></use>
+                    <use href="#dot" class="moustache" x=-115 y=-25></use>
+                    <use href="#dot" class="moustache" x=115 y=-25></use>
+                    <use href="#dot" class="moustache" x=150 y=-35></use>
+                    <use href="#dot" class="moustache" x=185 y=-45></use>
+                    <use href="#dot" class="moustache" x=115 y=0></use>
+                    <use href="#dot" class="moustache" x=150 y=10></use>
+                    <use href="#dot" class="moustache" x=185 y=20></use>
+                    <!-- tête du chat -->
+                    <use href="#dot" x=-22 y=75></use>
+                    <use href="#dot" x=-60 y=65></use>
+                    <use href="#dot" x=-95 y=50></use>
+                    <use href="#dot" x=-118 y=20></use>
+                    <use href="#dot" x=-134 y=-10></use>
+                    <use href="#dot" x=-131 y=-50></use>
+                    <use href="#dot" x=-115 y=-85></use>
+                    <use href="#dot" x=-117 y=-110></use>
+                    <use href="#dot" x=-115 y=-135></use>
+                    <use href="#dot" x=-97 y=-160></use>
+                    <use href="#dot" x=-75 y=-135></use>
+                    <use href="#dot" x=-55 y=-100></use>
+                    <use href="#dot" x=-22 y=-115></use>
+                    <use href="#dot" x=22 y=-115></use>
+                    <use href="#dot" x=55 y=-100></use>
+                    <use href="#dot" x=75 y=-135></use>
+                    <use href="#dot" x=97 y=-160></use>
+                    <use href="#dot" x=115 y=-135></use>
+                    <use href="#dot" x=117 y=-110></use>
+                    <use href="#dot" x=115 y=-85></use>
+                    <use href="#dot" x=131 y=-50></use>
+                    <use href="#dot" x=134 y=-10></use>
+                    <use href="#dot" x=118 y=20></use>
+                    <use href="#dot" x=95 y=50></use>
+                    <use href="#dot" x=60 y=65></use>
+                    <use href="#dot" x=22 y=75></use>
+                    
+                </g>
+            </g>
+
+            <g class="sheep inside-group">
+                <g>
+                    <use href="#dot" class="clickable" style="fill:#FFF;" x=0 y=-0></use>
+                    <!-- cheveux du mouton -->
+                    <use href="#dot" class="hair" x=-9 y=-100></use>
+                    <use href="#dot" class="hair" x=-28 y=-106></use>
+                    <use href="#dot" class="hair" x=-46 y=-115></use>
+                    <use href="#dot" class="hair" x=-64 y=-100></use>
+                    <use href="#dot" class="hair" x=-85 y=-117></use>
+                    <use href="#dot" class="hair" x=-105 y=-105></use>
+                    <use href="#dot" class="hair" x=-125 y=-120></use>
+                    <use href="#dot" class="hair" x=-130 y=-140></use>
+                    <use href="#dot" class="hair" x=-115 y=-154></use>
+                    <use href="#dot" class="hair" x=-90 y=-152></use>
+                    <use href="#dot" class="hair" x=-105 y=-182></use>
+                    <use href="#dot" class="hair" x=-92 y=-200></use>
+                    <use href="#dot" class="hair" x=-72 y=-195></use>
+                    <use href="#dot" class="hair" x=-65 y=-219></use>
+                    <use href="#dot" class="hair" x=-40 y=-210></use>
+                    <use href="#dot" class="hair" x=-31 y=-188></use>
+                    <use href="#dot" class="hair" x=-15 y=-206></use>
+                    <use href="#dot" class="hair" x=9 y=-217></use>
+                    <use href="#dot" class="hair" x=25 y=-188></use>
+                    <use href="#dot" class="hair" x=40 y=-210></use>
+                    <use href="#dot" class="hair" x=65 y=-219></use>
+                    <use href="#dot" class="hair" x=72 y=-195></use>
+                    <use href="#dot" class="hair" x=92 y=-200></use>
+                    <use href="#dot" class="hair" x=105 y=-182></use>
+                    <use href="#dot" class="hair" x=90 y=-152></use>
+                    <use href="#dot" class="hair" x=115 y=-154></use>
+                    <use href="#dot" class="hair" x=130 y=-140></use>
+                    <use href="#dot" class="hair" x=125 y=-120></use>
+                    <use href="#dot" class="hair" x=105 y=-105></use>
+                    <use href="#dot" class="hair" x=85 y=-117></use>
+                    <use href="#dot" class="hair" x=64 y=-100></use>
+                    <use href="#dot" class="hair" x=46 y=-115></use>
+                    <use href="#dot" class="hair" x=28 y=-106></use>
+                    <use href="#dot" class="hair" x=9 y=-116></use>
+                    <!-- tête du mouton -->
+                    <use href="#dot" x=-150 y=-115></use>
+                    <use href="#dot" x=-175 y=-108></use>
+                    <use href="#dot" x=-197 y=-95></use>
+                    <use href="#dot" x=-206 y=-76></use>
+                    <use href="#dot" x=-203 y=-54></use>
+                    <use href="#dot" x=-186 y=-40></use>
+                    <use href="#dot" x=-165 y=-58></use>
+                    <use href="#dot" x=-140 y=-54></use>
+                    <use href="#dot" x=-138 y=-35></use>
+                    <use href="#dot" x=-134 y=-9></use>
+                    <use href="#dot" x=-123 y=15></use>
+                    <use href="#dot" x=-97 y=39></use>
+                    <use href="#dot" x=-70 y=54></use>
+                    <use href="#dot" x=-40 y=65></use>
+                    <use href="#dot" x=0 y=75></use>
+                    <use href="#dot" x=40 y=65></use>
+                    <use href="#dot" x=70 y=54></use>
+                    <use href="#dot" x=97 y=39></use>
+                    <use href="#dot" x=123 y=15></use>
+                    <use href="#dot" x=134 y=-9></use>
+                    <use href="#dot" x=138 y=-35></use>
+                    <use href="#dot" x=140 y=-54></use>
+                    <use href="#dot" x=165 y=-58></use>
+                    <use href="#dot" x=186 y=-40></use>
+                    <use href="#dot" x=203 y=-54></use>
+                    <use href="#dot" x=206 y=-76></use>
+                    <use href="#dot" x=197 y=-95></use>
+                    <use href="#dot" x=175 y=-108></use>
+                    <use href="#dot" x=150 y=-115></use>
+                </g>
+            </g>
+
+            <g class="music inside-group">
+                <g>
+                    <use href="#dot" class="clickable" style="fill:#FFF;" x=0 y=-0></use>
+                    <!-- note -->
+                    <use href="#dot" x=67 y=-108></use>
+                    <use href="#dot" x=72 y=-130></use>
+                    <use href="#dot" x=68 y=-152></use>
+                    <use href="#dot" x=56 y=-171></use>
+                    <use href="#dot" x=35 y=-172></use>
+                    <use href="#dot" x=15 y=-175></use>
+                    <use href="#dot" x=-4 y=-182></use>
+                    <use href="#dot" x=-2 y=-154></use>
+                    <use href="#dot" x=2 y=-124></use>
+                    <use href="#dot" x=7 y=-92></use>
+                    <use href="#dot" x=16 y=-60></use>
+                    <use href="#dot" x=-40 y=13></use>
+                    <use href="#dot" x=-40 y=-10></use>
+                    <use href="#dot" x=-25 y=-30></use>
+                    <use href="#dot" x=0 y=-40></use>
+                    <use href="#dot" x=25 y=-30></use>
+                    <use href="#dot" x=40 y=-10></use>
+                    <use href="#dot" x=41 y=14></use>
+                    <use href="#dot" x=30 y=36></use>
+                    <use href="#dot" x=10 y=43></use>
+                    <use href="#dot" x=-10 y=41></use>
+                    <use href="#dot" x=-30 y=36></use>
+                </g>
+            </g>
+
+            <image class="stave" xlink:href="medias/portee.svg" alt=""></image>
+
+            <g class="notes"></g>
+        </svg>
+
+    </section>
+
+    <section class="section-3">
+        <div class="gauche">
+            <h1>Qui suis-je ?</h1>
+            <p>
+                Hello ! Je m'appelle Élodie et je suis étudiante en deuxième année de DUT Métiers du Multimédia et de
+                l'Internet, ou MMI en plus court.
+            </p>
+            <p>
+                Je suis passionnée par la musique et j'aime particulièrement le développement web que j'étudie dans
+                cette formation.
+                Vous avez devant vous mon interprétation du Projet Hex#words, réalisé pour le module d'intégration web.
+            </p>
+        </div>
+        <div class="droite">
+            <h1>Hexawords, c'est quoi ?</h1>
+            <p>
+                Le projet se définit par les 2 mots qui composent son intitulé : <em>"Hexadecimal"</em> et
+                <em>"Words"</em>.<br>
+                Dans le monde du web, les couleurs sont caractérisées par un code de 6 (ou 3) caractères en base 16,
+                d'où le mot "hexadécimal".
+            </p>
+            <p>
+                Composé de chiffres et de lettres (allant de A à F), il est parfois possible que le code corresponde à
+                un mot (<em>word</em> en anglais). L'objectif de ce projet est donc d'illustrer un mot écrit en code
+                hexadécimal tout en mettant en avant la couleur correspondante.
+            </p>
+        </div>
+
+        <div class="gauche">
+            <h1>#D07</h1>
+            <p>
+                Comme vous avez pu le constater, le mot que j'ai choisi est <em>DOT</em> (#D07), le mot anglais pour
+                "point".<br>
+                Pour illustrer ce mot, j'ai placé différents points à des positions particulières afin qu'ils forment
+                des mots et des figures qui s'animent.<br>
+                Et ce n'est pas tout ! J'ai aussi agrémenté le tout avec des éléments sonores pour rendre ce site plus
+                amusant et interactif.<br>
+                J'espère que ce site vous aura plu !
+            </p>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>
+            Sources :
+        </p>
+        <ul>
+            <li>Bruitages : Quicksounds.com</li>
+            <li>Musique : River Flow in You - Yiruma</li>
+        </ul>
+    </footer>
+</body>
+
+<script type="text/javascript" src="script.js"></script>
+
+</html>

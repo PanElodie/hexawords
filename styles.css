@@ -1,0 +1,603 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-display: swap;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.section-1 {
+    overflow: hidden;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+.firework {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 0;
+    /* Lorsque l'animation est terminée, l'élément disparait */
+
+    -webkit-animation-name: fireworks;
+    animation-name: fireworks;
+    -webkit-animation-duration: 2.5s;
+    animation-duration: 2.5s;
+}
+
+.explosion {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+
+    -webkit-animation-name: animation-explosion;
+    animation-name: animation-explosion;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-delay: 4.5s;
+    /* "L'explosion" se déclenche après l'animation des "feux d'artifice" */
+    animation-delay: 4.5s;
+}
+
+use {
+    transition: transform 2s ease-out;
+    fill: #D07;
+}
+
+.arrow-1 {
+    transform: translateY(360px);
+    transition: all 2s ease;
+}
+
+.arrow-1 .arrow {
+    fill: #FFF;
+}
+
+.arrow {
+    -webkit-animation-name: animation-arrow;
+    animation-name: animation-arrow;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+
+    transition: transform 0.5s ease;
+}
+
+.arrow-1,
+.section-2,
+.inside-group,
+.section-3,
+footer {
+    display: none;
+}
+
+.speaker {
+    transition: transform ease-out 0.5s;
+    position: absolute;
+}
+
+.move-speaker {
+    transform: translateX(250px)scale(0.3);
+}
+
+.animation-speaker {
+    -webkit-animation-name: animation-speaker;
+    animation-name: animation-speaker;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.line-1 {
+    fill: #6B1F93;
+}
+
+.line-2 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+    fill: #09D;
+}
+
+.line-3 {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+    fill: #07027B;
+}
+
+.clickable {
+    transform: translateY(-40px)scale(20);
+    cursor: pointer;
+}
+
+.music .clickable {
+    transform: scale(10);
+}
+
+.inside-group g {
+    -webkit-animation-name: animation-innerElement;
+    animation-name: animation-innerElement;
+    -webkit-animation-duration: 6s;
+    animation-duration: 6s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.cat,
+.music,
+.sheep {
+    transition: transform ease-in 0.8s;
+}
+
+.cat {
+    --positionForme: -220px;
+    -webkit-animation-name: animation-forme;
+    animation-name: animation-forme;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    transform: translateY(var(--positionForme))scale(0.5);
+}
+
+.cat g {
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+}
+
+.cat use {
+    fill: #FFB800;
+}
+
+.cat .moustache {
+    fill: #FFFF00
+}
+
+.music {
+    --positionForme: 0;
+    -webkit-animation-name: animation-forme;
+    animation-name: animation-forme;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    transform: translateY(var(--positionForme))scale(0.5);
+}
+
+.music g {
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
+}
+
+.music use,
+.notes use {
+    fill: #000
+}
+
+.stave {
+    transform: translate(-120%, -50%)rotate(-5deg);
+    display: none;
+}
+
+
+.sheep use {
+    fill: #DDC3A2
+}
+
+.sheep .hair {
+    fill: #9B6526
+}
+
+.sheep {
+    --positionForme: 220px;
+    transform: translateY(var(--positionForme))scale(0.5);
+
+    -webkit-animation-name: animation-forme;
+    animation-name: animation-forme;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.sheep g {
+    -webkit-animation-delay: 7s;
+    animation-delay: 7s;
+}
+
+/* L'élément sur lequel on a cliqué a la classe highlight-form voit sa propriété transform réinitialisée --> il se positionne au centre et a une plus grande largeur */
+g.highlight-form {
+    transform: translate(0);
+}
+
+/* Section de la présentation */
+.section-3 {
+    height: auto;
+    margin: 30px auto;
+    text-align: center;
+
+    /* display : flex ajouté avec le code js */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section-3,
+footer {
+    font-size: 2.8vw;
+    font-weight: 500;
+}
+
+.section-3 div {
+    width: 95vw;
+    height: 95vw;
+    border-radius: 50%;
+    padding: 30px 0;
+    margin: 10px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    -webkit-animation-name: text-apparition;
+    animation-name: text-apparition;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    background: linear-gradient(to right bottom, #D07, rgba(255, 255, 255, 0.151));
+}
+
+.section-3 h1,
+.section-3 p {
+    width: 80%;
+    line-height: 1.3em;
+}
+
+/* Translation vers la droite */
+.gauche {
+    --translate: -100%;
+}
+
+/* Translation vers la gauche */
+.droite {
+    --translate: 100%;
+}
+
+footer {
+    padding: 20px;
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (min-width : 590px) {
+    .arrow-1 {
+        transform: translateY(310px);
+    }
+}
+
+@media screen and (min-width : 620px) {
+    .arrow-1 {
+        transform: translateY(250px);
+    }
+}
+
+@media screen and (min-width : 720px) {
+    .move-speaker {
+        transform: translateY(220px)scale(0.3);
+    }
+
+    /* Les formes s'alignent horizontalement à paritr de 720px de largeur */
+    .cat {
+        --positionForme: -185px;
+        transform: translateX(var(--positionForme))scale(0.5);
+
+        -webkit-animation-name: animation-forme-desktop;
+        animation-name: animation-forme-desktop;
+    }
+
+    .sheep {
+        --positionForme: 185px;
+        transform: translateX(var(--positionForme))scale(0.5);
+
+        -webkit-animation-name: animation-forme-desktop;
+        animation-name: animation-forme-desktop;
+    }
+
+    .presentation p {
+        width: 60%;
+    }
+
+    .section-3,
+    footer {
+        font-size: 1.4vw;
+    }
+
+    .section-3 div {
+        width: 50vw;
+        height: 50vw;
+        margin: 0;
+    }
+
+    .gauche {
+        align-self: flex-start;
+    }
+
+    .droite {
+        align-self: flex-end;
+    }
+}
+
+@media screen and (min-width:1025px) {
+
+    /* Les espacements entre les formes sont plus élevés à partir de 1025px de largeur */
+    .cat {
+        --positionForme: -220px;
+    }
+
+    .sheep {
+        --positionForme: 220px;
+    }
+
+    .section-3 {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .section-3,
+    footer {
+        font-size: 0.9vw;
+    }
+
+    .section-3 div {
+        width: 30vw;
+        height: 30vw;
+    }
+}
+
+
+/* ANIMATIONS */
+
+/* Animation d'entrée */
+@-webkit-keyframes fireworks {
+    0% {
+        opacity: 1;
+        /* Hors animation, les éléments ont une opacité de 0 */
+        transform: translate(50%, 0);
+    }
+
+    40% {
+        transform: translate(50%, -150px);
+        width: 10px;
+        height: 10px;
+    }
+
+    50%,
+    100% {
+        opacity: 1;
+        transform: translate(50%, 175px);
+        width: 800px;
+        height: 800px;
+    }
+}
+
+@keyframes fireworks {
+    0% {
+        opacity: 1;
+        transform: translate(50%, 0);
+    }
+
+    40% {
+        transform: translate(50%, -150px);
+        width: 10px;
+        height: 10px;
+    }
+
+    50%,
+    100% {
+        opacity: 1;
+        transform: translate(50%, -175px);
+        width: 800px;
+        height: 800px;
+    }
+}
+
+@-webkit-keyframes animation-explosion {
+    0% {
+        background-color: #D07;
+    }
+
+    100% {
+        transform: scale(200);
+        background-color: #D07;
+
+    }
+}
+
+@keyframes animation-explosion {
+    0% {
+        background-color: #D07;
+    }
+
+    100% {
+        transform: scale(200);
+        background-color: #D07;
+
+    }
+}
+
+@-webkit-keyframes animation-arrow {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes animation-arrow {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+@-webkit-keyframes animation-speaker {
+
+    0%,
+    10% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 100%;
+    }
+
+    90%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes animation-speaker {
+
+    0%,
+    10% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 100%;
+    }
+
+    90%,
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Alignement vertical pour mobile */
+@-webkit-keyframes animation-forme {
+    0% {
+        transform: translateY(0)scale(0);
+    }
+
+    100% {
+        transform: translateY(var(--positionForme))scale(0.5);
+    }
+
+}
+
+@keyframes animation-forme {
+    0% {
+        transform: translateY(0)scale(0);
+    }
+
+    100% {
+        transform: translateY(var(--positionForme))scale(0.5);
+    }
+}
+
+/* Alignement horizontal pour ordinateur */
+@-webkit-keyframes animation-forme-desktop {
+    0% {
+        transform: translateX(0)scale(0);
+    }
+
+    100% {
+        transform: translateX(var(--positionForme))scale(0.5);
+    }
+
+}
+
+@keyframes animation-forme-desktop {
+    0% {
+        transform: translateX(0)scale(0);
+    }
+
+    100% {
+        transform: translateX(var(--positionForme))scale(0.5);
+    }
+}
+
+
+/* Animation qui augmente la taille de la forme */
+@-webkit-keyframes animation-innerElement {
+
+    0%,
+    20% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.5);
+    }
+
+    60%,
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes animation-innerElement {
+
+    0%,
+    20% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.2);
+    }
+
+    60%,
+    100% {
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes text-apparition {
+    0% {
+        transform: translateX(var(--translate));
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes text-apparition {
+    0% {
+        transform: translateX(var(--translate));
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
