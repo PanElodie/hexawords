@@ -1,3 +1,3 @@
 Projet réalisé dans le cadre du cours d'intégration web.
 
-<a href="https://perso-etudiant.u-pem.fr/~elodie.pan/hexwords/">Cliquer ici pour voir le projet</a>
+<a href="https://hexwords.elodiepan.fr">Cliquer ici pour voir le projet</a>
